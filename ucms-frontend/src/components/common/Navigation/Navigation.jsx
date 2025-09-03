@@ -18,7 +18,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="bg-white border-b">
+    <div className="bg-white shadow-sm mb-2 flex justify-center py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex space-x-8">
           {tabs.map(({ id, label, icon: Icon }) => (

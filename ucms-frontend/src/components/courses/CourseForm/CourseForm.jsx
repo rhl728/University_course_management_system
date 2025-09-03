@@ -35,24 +35,16 @@ const CourseForm = () => {
   };
 
   const departments = [
-    "Computer Science",
-    "Mathematics",
-    "English",
-    "Physics",
-    "Chemistry",
-    "Biology",
-    "History",
-    "Psychology",
-    "Business",
-    "Engineering",
+    "Department of Applied Computing",
+    "Department of Computer Systems Engineering",
+    "Department of Software Engineering",
   ];
 
   const semesters = [
-    "Fall 2024",
-    "Spring 2024",
-    "Summer 2024",
-    "Fall 2023",
-    "Spring 2025",
+    "1st year 2025",
+    "2nd year 2025",
+    "3rd year 2025",
+    "4th year 2025",
   ];
 
   return (

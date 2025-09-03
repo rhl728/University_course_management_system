@@ -33,30 +33,17 @@ export const ACADEMIC_YEARS = ["Freshman", "Sophomore", "Junior", "Senior"];
 
 // Departments
 export const DEPARTMENTS = [
-  "Computer Science",
-  "Mathematics",
-  "English",
-  "Physics",
-  "Chemistry",
-  "Biology",
-  "History",
-  "Psychology",
-  "Business Administration",
-  "Engineering",
-  "Art",
-  "Music",
-  "Philosophy",
-  "Political Science",
-  "Economics",
+  "Department of Applied Computing",
+  "Department of Computer Systems Engineering",
+  "Department of Software Engineering",
 ];
 
 // Semesters
 export const SEMESTERS = [
-  "Fall 2024",
-  "Spring 2024",
-  "Summer 2024",
-  "Fall 2023",
-  "Spring 2025",
+  "1st year 2025",
+  "2nd year 2025",
+  "3rd year 2025",
+  "4th year 2025",
 ];
 
 // Majors (can be same as departments for simplicity)
