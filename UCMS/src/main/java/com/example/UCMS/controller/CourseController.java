@@ -1,30 +1,53 @@
 package com.example.UCMS.controller;
 
-
 import com.example.UCMS.model.Course;
 import com.example.UCMS.repository.CourseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/courses")
-@CrossOrigin(origins = "http://localhost:3000") // allow React later
 public class CourseController {
 
-    @Autowired
-    private CourseRepository repo;
+    private final CourseRepository courseRepository;
 
-    // GET: fetch all courses
-    @GetMapping
-    public List<Course> getAllCourses() {
-        return repo.findAll();
+    public CourseController(CourseRepository courseRepository) {
+        this.courseRepository = courseRepository;
     }
 
-    // POST: add a new course
+    @GetMapping
+    public List<Course> getAllCourses() {
+        return courseRepository.findAll();
+    }
+
     @PostMapping
-    public Course addCourse(@RequestBody Course course) {
-        return repo.save(course);
+    public Course createCourse(@RequestBody Course course) {
+        return courseRepository.save(course);
+    }
+
+    @GetMapping("/{id}")
+    public Course getCourseById(@PathVariable Long id) {
+        return courseRepository.findById(id).orElseThrow();
+    }
+
+    @PutMapping("/{id}")
+    public Course updateCourse(@PathVariable Long id, @RequestBody Course courseDetails) {
+        Course course = courseRepository.findById(id).orElseThrow();
+        course.setTitle(courseDetails.getTitle());
+        course.setInstructor(courseDetails.getInstructor());
+        course.setCredits(courseDetails.getCredits());
+        course.setCapacity(courseDetails.getCapacity());
+        course.setEnrolled(courseDetails.getEnrolled());
+        course.setSemester(courseDetails.getSemester());
+        course.setSchedule(courseDetails.getSchedule());
+        course.setLocation(courseDetails.getLocation());
+        course.setDepartment(courseDetails.getDepartment());
+        return courseRepository.save(course);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteCourse(@PathVariable Long id) {
+        courseRepository.deleteById(id);
     }
 }
