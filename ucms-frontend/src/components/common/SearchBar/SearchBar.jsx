@@ -1,6 +1,6 @@
 import React from "react";
 import { Search, Plus } from "lucide-react";
-import { useAppContext } from "../../contexts/AppContext";
+import { useAppContext } from "../../../contexts/AppContext";
 
 const SearchBar = () => {
   const { state, dispatch } = useAppContext();

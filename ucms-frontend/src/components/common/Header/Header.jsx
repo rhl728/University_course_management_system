@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppContext } from "../../contexts/AppContext";
+import { useAppContext } from "../../../contexts/AppContext";
 
 const Header = () => {
   const { state, dispatch } = useAppContext();
@@ -15,11 +15,8 @@ const Header = () => {
         <div className="flex justify-between items-center py-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">
-              University Course Management
+              University Course Management System
             </h1>
-            <p className="text-gray-600 mt-1">
-              Manage courses, students, and academic records
-            </p>
           </div>
           <div className="flex items-center space-x-4">
             <select

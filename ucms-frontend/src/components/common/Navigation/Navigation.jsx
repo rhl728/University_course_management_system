@@ -1,6 +1,6 @@
 import React from "react";
 import { BookOpen, Users, GraduationCap } from "lucide-react";
-import { useAppContext } from "../../contexts/AppContext";
+import { useAppContext } from "../../../contexts/AppContext";
 
 const Navigation = () => {
   const { state, dispatch } = useAppContext();

@@ -1,12 +1,12 @@
 import React from "react";
-import { useAppContext } from "../../contexts/AppContext";
-import Header from "../common/Header";
-import Navigation from "../common/Navigation";
-import SearchBar from "../common/SearchBar";
-import Modal from "../common/Modal";
-import CourseList from "../courses/CourseList";
-import StudentList from "../students/StudentList";
-import ResultsTable from "../results/ResultsTable";
+import { useAppContext } from "../../../contexts/AppContext";
+import Header from "../Header";
+import Navigation from "../Navigation";
+import SearchBar from "../SearchBar";
+import Modal from "../Modal";
+import CourseList from "../../courses/CourseList";
+import StudentList from "../../students/StudentList";
+import ResultsTable from "../../results/ResultsTable";
 
 const Layout = () => {
   const { state } = useAppContext();

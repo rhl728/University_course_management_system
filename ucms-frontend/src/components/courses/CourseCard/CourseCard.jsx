@@ -1,6 +1,6 @@
 import React from "react";
 import { Edit3, Trash2, User, Award, Clock, MapPin } from "lucide-react";
-import { useAppContext } from "../../contexts/AppContext";
+import { useAppContext } from "../../../contexts/AppContext";
 
 const CourseCard = ({ course }) => {
   const { dispatch } = useAppContext();

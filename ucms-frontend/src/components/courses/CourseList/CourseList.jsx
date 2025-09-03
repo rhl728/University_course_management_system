@@ -1,6 +1,6 @@
 import React from "react";
-import { useAppContext } from "../../contexts/AppContext";
-import CourseCard from "../courses/CourseCard";
+import { useAppContext } from "../../../contexts/AppContext";
+import CourseCard from "../CourseCard";
 
 const CourseList = () => {
   const { state } = useAppContext();
